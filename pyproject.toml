@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "reliability-ai"
+version = "0.1.0"
+description = "Time-Series Anomaly Detection for Industrial Equipment" 
+readme = "README.md"
+requires-python = ">=3.10"
+
+authors = [
+    { name = "Daryl Choo Chia Ler" }
+]
+
+dependencies = [
+    "numpy",
+    "pandas",
+    "scikit-learn",
+    "tensorflow",
+    "pyyaml",
+    "joblib",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
