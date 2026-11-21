@@ -1,29 +1,31 @@
 # reliability-ai
 
-Time-series anomaly detection for industrial equipment.
+A modular Python package for multivariate time-series anomaly detection using a TensorFlow/Keras Temporal Convolutional Network Autoencoder.
 
-## Purpose
+## Current capabilities
 
-`reliability-ai` provides development tools to deploy machine learning models for anomaly detection across systems.
+- Causal dilated Conv1D residual blocks
+- TCN autoencoder reconstruction
+- Contiguous time-series sequence generation
+- StandardScaler preprocessing
+- Training and validation with early stopping
+- Sequence-level reconstruction error
+- Feature-level reconstruction attribution
+- Percentile-based anomaly detection
+- Timestamp-aligned engineering-unit reconstruction results
+- Configuration-driven high-level detector
+- Automated pytest coverage
 
-This implementation focuses on Temporal Convolutional Network Autoencoders (TCN-AE) for multivariate time-series anomaly detection.
+## Status
 
-## Application
+Version 0.1.0 is under active development.
 
-The first implementation is based on high-pressure compressor anomaly detection.
-
-The library is designed such that system-specific information:
-
-- feature names
-- window sizes
-- model parameters
-- anomaly thresholds
-
-can be configured independently from model implementation.
+A reproducible demonstration using the NASA C-MAPSS turbofan degradation dataset is planned for a later release.
 
 ## Installation
 
-For development, install the package in editable mode:
-
 ```bash
-pip install -e .
+git clone <repository-url>
+cd reliability-ai
+python -m venv venv
+pip install -e ".[dev]"
