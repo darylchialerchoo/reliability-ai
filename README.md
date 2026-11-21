@@ -25,7 +25,7 @@ A reproducible demonstration using the NASA C-MAPSS turbofan degradation dataset
 ## Installation
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/darylchialerchoo/reliability-ai.git
 cd reliability-ai
 python -m venv venv
 pip install -e ".[dev]"
